@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Trab-bimestral-LP/static/css/main.99e4cf39.css",
+    "main.js": "/Trab-bimestral-LP/static/js/main.a89eea0e.js",
+    "index.html": "/Trab-bimestral-LP/index.html",
+    "main.99e4cf39.css.map": "/Trab-bimestral-LP/static/css/main.99e4cf39.css.map",
+    "main.a89eea0e.js.map": "/Trab-bimestral-LP/static/js/main.a89eea0e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.99e4cf39.css",
+    "static/js/main.a89eea0e.js"
+  ]
+}
