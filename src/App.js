@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import TelaCadastroCliente from "./telasCadastro/TelaCadastroCliente";
+import TelaCadastroFornecedor from "./telasCadastro/TelaCadastroFornecedor";
+import TelaCadastroProduto from "./telasCadastro/TelaCadastroProduto";
+import TelaCadastroCategorias from "./telasCadastro/TelaCadastroCategorias";
+import Tela404 from "./telasCadastro/Tela404";
+import TelaMenu from "./telasCadastro/TelaMenu";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          {
+            //Os caminhos (path) devem ser organizados do mais específico para o mais geral
+          }
+          <Route path="/clientes" element={<TelaCadastroCliente/>} />
+          <Route path="/produtos" element={<TelaCadastroProduto/>} />
+          <Route path="/fornecedor" element={<TelaCadastroFornecedor/>} />
+          <Route path="/categoria" element={<TelaCadastroCategorias/>} />
+          <Route path="/" element={<TelaMenu/>}/>  
+          {
+            //... demais telas de cadastro
+          }
+          <Route path="*" element={<Tela404/>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
